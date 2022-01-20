@@ -50,10 +50,6 @@ print("a = ",round(abc[0],2))
 print("b = ",round(abc[1],2))
 print("c = ",round(abc[2],2))
 
-
-
-
-
 # %% [markdown]
 # #### Exercise 3
 # Write a python function that takes as its argument 3 ordered pairs (they may be either tuples or vecgtors), and returns a vector containing the coefficients of the quadratic polynomial that passes through these three 3 points
@@ -89,7 +85,7 @@ print("c = ",round(abc[2],2))
 # %%
 import matplotlib.pyplot as plt
 import numpy as np
-
+x = np.linspace(0,5,100)
 x0 = np.array([1,1,1,1])
 x1 = np.array([1,2,3,4])
 x2 = np.array(x1**2)
@@ -101,10 +97,25 @@ a = abcd[0]
 b = abcd[1]
 c = abcd[2]
 d = abcd[3]
-x = np.linspace(0,5,1E3)
 y = a*x**3 + b*x**2 + c*x + d
-plt.plot(x,y)
+plt.plot(x,a*x**3 + b*x**2 + c*x + d)
 plt.plot( 1, 3.4, marker='o')
 plt.plot( 2, 1.8, marker='o')
 plt.plot( 3, 2.1, marker='o')
 plt.plot( 4, 6.7, marker='o')
+plt.show()
+
+
+# %% [markdown]
+# #### pyplot example
+
+# %%
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 20, 100)  # Create a list of evenly-spaced numbers over the range
+plt.plot(x, np.sin(x))       # Plot the sine of each x point
+plt.plot(2.5,np.sin(2.5),marker='o')
+plt.show()                   # Display the plot
+
+
